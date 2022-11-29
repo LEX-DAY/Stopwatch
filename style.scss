@@ -1,0 +1,109 @@
+$mainColor1: #223038;
+$mainColor2: #08161d;
+
+* {
+    font-family: 'Dosis', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 50px 150px;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__block {
+        width: 200px;
+        margin: 0 30px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        .time {
+            background-color: $mainColor1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            height: 200px;
+            font-size: 110px;
+        }
+        .title {
+            background-color: $mainColor2;
+            padding: 5px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            text-align: center;
+            color:#fff;
+            font-size: 20px; 
+        }
+    }
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 150px;
+    .button {
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+        padding: 10px;
+        width: 180px;
+        transition: .3s ease-in-out;
+        cursor: pointer;
+        &.start {
+            color: $mainColor1;
+            &:hover {
+                background-color: $mainColor2;
+                color: #fff;
+            }
+        }
+        &.pause {
+            color: $mainColor1;
+            &:hover {
+                background-color:rgba(154, 36, 124, 0.689);
+                color: #fff;
+            }
+        }
+        &.stop {
+            color: $mainColor1;
+            &:hover {
+                background-color: $mainColor2;
+                color: #fff;
+            }
+        }
+
+        &.new {
+            color: $mainColor1;
+            &:hover {
+                background-color: #10a97ed8;
+                color: #fff;
+            }
+            &:disabled {
+                background-color: none;
+                cursor: not-allowed;
+            }            
+        }
+    }
+}
+
+.results__block {
+    display: block;
+    margin-top: 50px;
+    border-top: 2px solid rgb(52, 17, 133);
+    color: #08161d;
+    text-align: center;
+    font-size: 26px;
+    padding: 15px;
+    .results__title {
+        padding-bottom: 10px;
+    }
+    .results {
+        padding-bottom: 10px;
+    }
+}
